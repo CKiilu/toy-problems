@@ -23,15 +23,33 @@ package hash;
 import java.util.*;
 
 public class VowelCount {
- public VowelCount(){
-    HashMap<String, Integer> vowels = new HashMap<String, Integer>();
-    vowels.put("a", 0);
-    vowels.put("b", 1);
-    vowels.put("c", 2);
-    vowels.put("d", 3);
-    vowels.put("e", 4);
+ public static HashMap<Character, Integer> VowelCount(String x){
+	x = x.toLowerCase();
+	int a, e, i, o, u;
+	a = e = i = o = u = 0;
+	for(int g = 0; g < x.length(); g++){
+		if(x.charAt(g) == 'a')
+			a++;
+		else if(x.charAt(g) == 'e')
+			e++;
+		else if(x.charAt(g) == 'i')
+			i++;
+		else if(x.charAt(g) == 'o')
+			o++;
+		else if(x.charAt(g) == 'u')
+			u++;	
+	}
+    HashMap<Character, Integer> vowels = new HashMap<Character, Integer>();
+    vowels.put('a', a);
+    vowels.put('b', e);
+    vowels.put('c', i);
+    vowels.put('d', o);
+    vowels.put('e', u);
+    return vowels;
  }
 public static void main(String[] args) {
-  HashMap vowels = vowels.VowelCount("Do you like to travel around the world?");
+	Scanner sc = new Scanner(System.in);
+	System.out.println("Kindly type a sentence.");
+	sc.nextLine();
 }
 }
