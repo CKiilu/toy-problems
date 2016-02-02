@@ -23,7 +23,7 @@ package hash;
 import java.util.*;
 
 public class VowelCount {
- public static HashMap<Character, Integer> VowelCount(String x){
+ public static HashMap<Character, Integer> vowelCount(String x){
 	x = x.toLowerCase();
 	int a, e, i, o, u;
 	a = e = i = o = u = 0;
@@ -50,6 +50,7 @@ public class VowelCount {
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
 	System.out.println("Kindly type a sentence.");
-	sc.nextLine();
+	
+	System.out.println(vowelCount(sc.nextLine()));
 }
 }
